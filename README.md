@@ -6,12 +6,12 @@
 
 1、添加chart仓库
 ```
-# helm repo add myrepo https://yandongxiao.github.io/helm-chart-demo
+helm repo add myrepo https://yandongxiao.github.io/helm-chart-demo
 ```
 
 2、安装chart包
 ```
-# helm install xxx myrepo/test
+helm install xxx myrepo/test
 ```
 
 xxx为relaese名字

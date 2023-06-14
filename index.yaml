@@ -3,12 +3,12 @@ entries:
   test:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-06-14T17:37:06.925236+08:00"
+    created: "2023-06-14T17:46:57.012679+08:00"
     description: A Helm chart for Kubernetes
     digest: d0eda58c4b9ba3f79eae6833681d10ff55f5f7f07bec84a31cf76182b4bc8c29
     name: test
     type: application
     urls:
-    - https://yandongxiao.github.io/helm-chart/test-0.1.0.tgz
+    - https://yandongxiao.github.io/helm-chart-demo/test-0.1.0.tgz
     version: 0.1.0
-generated: "2023-06-14T17:37:06.924262+08:00"
+generated: "2023-06-14T17:46:57.011337+08:00"
