@@ -17,3 +17,4 @@ helm install xxx myrepo/test
 xxx为relaese名字
 
 3、将该 helm chart 发布到 artifacthub.io 上。作为 Verified Publisher，需要添加`arrifacthub-repo.yaml`文件到仓库根目录。
+
