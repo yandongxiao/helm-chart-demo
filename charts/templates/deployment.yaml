@@ -38,6 +38,7 @@ spec:
               containerPort: {{ .Values.service.port }}
               myPort: {{ tpl .Values.service.myPort . }}
               protocol: TCP
+              port: {{ include "foo.a" . }}
           livenessProbe:
             httpGet:
               path: /

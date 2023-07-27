@@ -60,3 +60,15 @@ Create the name of the service account to use
 {{- default "default" .Values.serviceAccount.name }}
 {{- end }}
 {{- end }}
+
+{{- define "foo.a" -}}
+{{- $config := index .Values.config  -}}
+{{- $configMap := dict -}}
+{{- range $line := splitList "\n" $config -}}
+{{- $pair := splitList "=" $line -}}
+{{- if eq (len $pair) 2 -}}
+{{- $_ := set $configMap (trim (index $pair 0)) (trim (index $pair 1)) -}}
+{{- end -}}
+{{- end -}}
+{{- print (index $configMap "a") -}}
+{{- end }}

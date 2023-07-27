@@ -41,6 +41,9 @@ service:
   port: 80
   myPort: "{{ .Values.myPort }}"
 
+config: |
+  a = b
+
 ingress:
   enabled: false
   className: ""
