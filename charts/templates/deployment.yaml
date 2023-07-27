@@ -36,6 +36,7 @@ spec:
           ports:
             - name: http
               containerPort: {{ .Values.service.port }}
+              myPort: {{ tpl .Values.service.myPort . }}
               protocol: TCP
           livenessProbe:
             httpGet:

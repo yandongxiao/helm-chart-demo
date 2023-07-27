@@ -35,10 +35,11 @@ securityContext: {}
   # readOnlyRootFilesystem: true
   # runAsNonRoot: true
   # runAsUser: 1000
-
+myPort: 8080
 service:
   type: ClusterIP
   port: 80
+  myPort: "{{ .Values.myPort }}"
 
 ingress:
   enabled: false
