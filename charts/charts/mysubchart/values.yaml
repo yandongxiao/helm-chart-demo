@@ -1,13 +1,14 @@
-# Default values for foo.
+# Default values for mysubchart.
 # This is a YAML-formatted file.
 # Declare variables to be passed into your templates.
 
 replicaCount: 1
 
-mysubchart:
-  dessert: ice cream
-  global:
-    salad: caesar00000000
+dessert: cake
+
+global:
+  salad: gggggggggg
+
 
 image:
   repository: nginx
@@ -40,14 +41,10 @@ securityContext: {}
   # readOnlyRootFilesystem: true
   # runAsNonRoot: true
   # runAsUser: 1000
-myPort: 8080
+
 service:
   type: ClusterIP
   port: 80
-  myPort: "{{ .Values.myPort }}"
-
-config: |
-  a = b
 
 ingress:
   enabled: false
