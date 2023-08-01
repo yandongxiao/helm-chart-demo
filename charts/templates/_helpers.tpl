@@ -5,6 +5,14 @@ Expand the name of the chart.
 {{- default .Chart.Name .Values.nameOverride | trunc 63 | trimSuffix "-" }}
 {{- end }}
 
+{{- define "kube-starrocks.name" -}}
+{{- default .Chart.Name .Values.namePrefix -}}
+{{- end }}
+
+{{- define "starrockscluster.fe.name" -}}
+{{ include "kube-starrocks.name" . }}
+{{- end }}
+
 {{/*
 Create a default fully qualified app name.
 We truncate at 63 chars because some Kubernetes name fields are limited to this (by the DNS naming spec).

@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ .Release.Name }}-configmap
+data:
+  aaa: {{- template "starrockscluster.fe.name" . -}}
+  bbb: {{- include "kube-starrocks.name" . }}
